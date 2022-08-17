@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="orange.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+
+</head>
+
+<body>
+    <div class="container">
+
+
+        <div class="slide-image">
+        
+            <div id="demo" class="carousel slide" data-bs-ride="carousel">
+
+                <!-- Indicators/dots -->
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+                  <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+                
+                </div>
+                
+                <!-- The slideshow/carousel -->
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="https://orangecodingacademy.com/assets/img/1.jpg" alt="" class="d-block" style="width:100% ;height: 900px;">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="data:image/png;base64,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" alt="Chicago" class="d-block" style="width:100%;height: 900px;">
+                  </div>
+                 
+                </div>
+                
+               
+              </div>
+           
+              
+        
+        
+        
+        
+        
+        </div>
+
+
+        <div class="text">
+            <div class="first">
+                <nav class="navbar navbar-expand-sm bg-white navbar-white">
+                    <div class="container-fluid">
+                        <a class="navbar-brand" href="#"><img src="Capture.JPG">
+                        
+                        </a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarResponsive">
+                            <ul class="navbar-nav ms-auto me-4 my-3 my-lg-0">
+                                <li class="nav-item">
+                                    <a class="nav-link active" href="page-one.html"><b>Help</b></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link active" href="#about"><b>Terms & Conditions</b></a>
+                                </li>
+                    
+                            </ul>
+                        </div>
+                    </div>
+                  
+                </nav>
+            </div>
+
+
+          <hr> 
+
+
+            <form action="orange.html" id="note-form"  name = "myForm" onsubmit = "return(validate());">
+
+               <p class="create">Create an account</p>
+               
+                    <label for="mail" >Email address </label><br>
+                    <input type="email" id="mail" name = "EMail" ><br>
+                    <div id="one"></div>
+                    <p>eg:Username@domain.com</p>
+
+                    <label for="number">Mobile </label><br>
+                    <input type="number" id="number" name="number"><br>
+                    <div id="two"></div>
+                    <p>eg:077*******</p>
+                   
+                    <label for="password"> Create Password </label><br>
+                    <input type="password" id="password" name="password" autocomplete="current-password"  ><br>
+                    <i class="far fa-eye" id="togglePassword" style="margin-left: 400px;  cursor: pointer; " ></i> 
+                   <div id="three" class="err" ></div> 
+
+                    <p> The Password should be between 6-18 characters.</p>
+
+
+                    <input class="check" type="checkbox" id="one" name="one" >
+                    <label for="one"> I agree to the <a href="www.google.com">terms & conditions</a> Orange.</label><br>
+                    <div id="four"></div>
+
+                    <input class="check" type="checkbox" id="two" name="two" >
+                    <label for="two">Receive Coding Academy Newsletter.</label><br>
+
+                    <input class="sign" type="submit" value="Sign up" id="note-submit"><br><br>
+                   
+                  </form>
+                  <form action="orange-login.html" target="_blank">
+                  
+         <a href="orange-login.html"><input class="login" type="submit" value="Already have an account?Login" ></a>
+</form>
+<ul id="notes"></ul>
+
+
+        </div>
+    </div>
+
+      
+    <script>
+       
+
+
+      
+
+
+
+
+        function validate() {
+
+          //first load
+   
+      if( document.myForm.EMail.value == "") {
+
+        document.getElementById("one").innerHTML= "<img src='warning.JPG'> The email field is required.";
+        
+
+         document.getElementById("two").innerHTML= "<img src='warning.JPG'> The mobile field is required.";  
+
+          document.getElementById("three").innerHTML= "<img src='warning.JPG'> The password field is required.";
+          document.getElementById("four").innerHTML= "<img src='warning.JPG'> The Terms & Conditions Not Checked";
+          
+         document.myForm.EMail.focus() ;
+
+         return false;
+      }
+
+
+
+
+
+      if(  document.myForm.number.value == ""){
+        document.getElementById("two").innerHTML= "<img src='warning.JPG'> The mobile field is required."; 
+        return false;
+
+  }
+  // when you write number& pass in wrong way
+     else if(document.myForm.number.value[2]== 9 || document.myForm.number.value[2]== 8 ){
+        document.getElementById("two").innerHTML= "<img src='warning.JPG'> The mobile number isn't Orange."; 
+        return false;
+
+        }
+    
+
+
+
+
+      if(  document.myForm.password.value ==""){
+        document.getElementById("three").innerHTML= "<img src='warning.JPG'> The password field is required.";
+        return false;
+      }
+
+
+
+// when you write number& pass in wrong way
+
+  
+
+      else if(document.myForm.password.value.length <6  ){
+        document.getElementById("three").innerHTML= "<img src='warning.JPG'> The password must be at least 6 characters."
+        return false;
+
+      }
+      else if( document.myForm.password.value.length >18 ){
+        document.getElementById("three").innerHTML= "<img src='warning.JPG'> The password may not be greater than 18 characters."
+        return false;
+
+      }
+  
+ 
+       emailInput= document.getElementById("mail")
+       mobileInput= document.getElementById("number")
+       passwordInput=document.getElementById("password")
+
+
+ 
+   if(validate=true){
+
+         // if local storage is empty we creat new array[]
+
+   Data = JSON.parse(localStorage.getItem('Data')) || [];
+
+  Data.push({
+    Email: emailInput.value ,number: mobileInput.value , password: passwordInput.value });
+  
+  localStorage.setItem("Data",JSON.stringify(Data))
+return false
+
+ } 
+
+//  if(validate=true){
+
+// // if local storage is empty we creat new array
+
+// if(Data){
+// Data= JSON.parse(localStorage.getItem('Data'))
+// Data.push({
+// Email: emailInput.value ,
+// number: mobileInput.value ,
+// password: passwordInput.value
+
+// });
+// return false
+// } else if(Data= []){ ;
+//   Data.push({
+// Email: emailInput.value ,
+// number: mobileInput.value ,
+// password: passwordInput.value
+
+// });
+// return false
+// }
+
+// localStorage.setItem("Data",JSON.stringify(Data))
+// return false
+
+// } 
+
+
+
+
+
+
+        }
+
+
+   
+
+
+
+
+
+   const togglePassword = document.querySelector('#togglePassword');
+  const password = document.querySelector('#password');
+
+  togglePassword.addEventListener('click', function (e) {
+    // toggle the type attribute
+    const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+    password.setAttribute('type', type);
+    // toggle the eye slash icon
+    this.classList.toggle('fa-eye-slash');
+});
+
+
+
+
+
+
+    </script>
+
+
+
+</body>
+
+</html> 
