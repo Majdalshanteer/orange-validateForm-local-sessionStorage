@@ -120,6 +120,7 @@
           ></i>
           <div id="three" class="err"></div>
           <a class="forget">Forgot your password?</a>
+          <div id="invalid"></div>
 
           <input class="sign" type="submit" value="Login " /><br /><br />
         </form>
@@ -168,8 +169,9 @@
 
       }
 
-      if(validate=true){
 
+
+      if(validate=true){
 
         var Data = window.localStorage.getItem('Data');
 
@@ -183,19 +185,23 @@
 
                   if (emailInput.value==Data[i].Email && passwordInput.value==Data[i].password ) {
 
+   window.sessionStorage.setItem ('user' , emailInput.value)
+   window.sessionStorage.setItem ('pass' , passwordInput.value)
 
-                        window.open('hello.html', '_blank');
-                   window.sessionStorage.setItem ('user' , emailInput.value)
                     localStorage.setItem("Data",JSON.stringify(Data))
+                        window.open('hello.html', '_blank');
+                
                     return false;
 
 
                   }
                   else{
+                    document.getElementById("invalid").textContent='invalid password or email'
+                  
 
 
 
-                 alert("invalid password or email")
+                //  alert("invalid password or email")
 
                 }
 
@@ -207,7 +213,7 @@
 
 
 
-
+}
 
 
         const togglePassword = document.querySelector('#togglePassword');
@@ -219,7 +225,7 @@
           password.setAttribute('type', type);
           // toggle the eye slash icon
           this.classList.toggle('fa-eye-slash');
-      });}
+      });
     </script>
   </body>
 </html>

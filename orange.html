@@ -134,8 +134,7 @@
 
       
 
-
-
+  document.myForm.EMail.focus() ;
 
         function validate() {
 
@@ -144,20 +143,13 @@
       if( document.myForm.EMail.value == "") {
 
         document.getElementById("one").innerHTML= "<img src='warning.JPG'> The email field is required.";
-        
-
          document.getElementById("two").innerHTML= "<img src='warning.JPG'> The mobile field is required.";  
-
           document.getElementById("three").innerHTML= "<img src='warning.JPG'> The password field is required.";
           document.getElementById("four").innerHTML= "<img src='warning.JPG'> The Terms & Conditions Not Checked";
           
-         document.myForm.EMail.focus() ;
-
          return false;
       }
-
-
-
+      
 
 
       if(  document.myForm.number.value == ""){
@@ -172,9 +164,6 @@
 
         }
     
-
-
-
 
       if(  document.myForm.password.value ==""){
         document.getElementById("three").innerHTML= "<img src='warning.JPG'> The password field is required.";
@@ -207,52 +196,45 @@
  
    if(validate=true){
 
-         // if local storage is empty we creat new array[]
 
    Data = JSON.parse(localStorage.getItem('Data')) || [];
-
+  
   Data.push({
     Email: emailInput.value ,number: mobileInput.value , password: passwordInput.value });
   
   localStorage.setItem("Data",JSON.stringify(Data))
+
 return false
 
  } 
+console.log(Data)
 
-//  if(validate=true){
+//............................ second method
 
-// // if local storage is empty we creat new array
+// if(validate=true){
+//   var data = window.localStorage.getItem("data");
+//   if (data) {
+//               //   Josn.parse to convet string to array 
 
-// if(Data){
-// Data= JSON.parse(localStorage.getItem('Data'))
-// Data.push({
-// Email: emailInput.value ,
-// number: mobileInput.value ,
-// password: passwordInput.value
+//     data = JSON.parse(data);
+//   } else {
+    
+//     var data = [];
+//           data.push({Email: emailInput.value ,number: mobileInput.value , password: passwordInput.value});
+//         }
 
-// });
-// return false
-// } else if(Data= []){ ;
-//   Data.push({
-// Email: emailInput.value ,
-// number: mobileInput.value ,
-// password: passwordInput.value
+//         //  i use JSON.stringify to convert array to string
 
-// });
-// return false
-// }
-
-// localStorage.setItem("Data",JSON.stringify(Data))
-// return false
-
-// } 
+//         window.localStorage.setItem("data", JSON.stringify(data));
+//       }
+//       return false
+}
 
 
 
 
 
-
-        }
+      
 
 
    
